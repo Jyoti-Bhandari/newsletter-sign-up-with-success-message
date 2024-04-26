@@ -1,0 +1,243 @@
+/* Importing the font */
+@font-face {
+    font-family: MyFont;
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+:root {
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: MyFont;
+    background-color: var(--dark-slate-grey);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.right-wrapper {
+    width: 60%;
+    padding-left: 40px;
+}
+
+.right-wrapper h1 {
+    margin-top: 25px;
+    font-size: 50px;
+}
+
+.right-wrapper p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-image: url(../assets/images/icon-list.svg);
+    margin-bottom: 40px;
+    font-size: 16px;
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+li {
+    margin-bottom: 16px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.container form .field-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container form .field-group p {
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+/* error class */
+.container form .field-group .error-text {
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: 900;
+    display: none;
+}
+
+.container input {
+    padding: 10px 20px;
+    font-family: inherit;
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    outline: none;
+    cursor: pointer;
+}
+
+button {
+    font-family: inherit;
+    margin-top: 20px;
+    padding: 15px 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--charcoal-grey);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--tomato);
+}
+
+.left-wrapper {
+    width: 40%;
+}
+
+.left-wrapper img {
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+/* Second container starts */
+.container-second {
+    background-color: var(--white);
+    width: 400px;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.container-second h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: var(--dark-slate-grey);
+    line-height: 1;
+}
+
+.container-second p {
+    color: var(--dark-slate-grey);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.container-second p .submitted-email {
+    font-weight: 900;
+}
+
+.container-second img {
+    margin-bottom: 20px;
+}
+
+.container-second button {
+    width: 100%;
+    font-family: MyFont;
+}
+
+@media (max-width:840px) {
+    .container {
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0px 0px 20px 0px;
+        border-radius: 0px;
+    }
+
+    .right-wrapper {
+        width: 100%;
+        padding: 0px 30px 0px 30px;
+    }
+
+    .right-wrapper h1 {
+        margin-top: 25px;
+        font-size: 40px;
+    }
+
+    .left-wrapper {
+        width: 100%;
+    }
+
+    .left-wrapper img {
+        content: url(../assets/images/illustration-sign-up-mobile.svg);
+    }
+
+    .container form {
+        width: 100%;
+    }
+
+    .container-second {
+        display: flex;
+        align-items: self-start;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 100vh;
+        border-radius: 0px;
+        margin: 0;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .container-second form {
+        width: 100%;
+        margin-top: 150px;
+    }
+
+    .container-second button {
+        margin-top: 0px;
+    }
+
+    .container-second img {
+        height: 70px;
+        /* position: relative;
+        right: 125px; */
+    }
+
+    .container-second h1 {
+        font-size: 40px;
+    }
+
+}
+
+/* footer classes */
+.attribution {
+    background-color: black;
+    padding: 13px;
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
